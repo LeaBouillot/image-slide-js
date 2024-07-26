@@ -6,3 +6,48 @@
   box-sizing: border-box;
   font-family: "poppins", sans-serif;
 }
+
+body {
+  background-color: #191919;
+}
+.gallery-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10% auto;
+}
+.gallery {
+  display: flex;
+  width: 900px;
+  overflow-x: scroll;
+  /* gérer le dépassement du contenu d'un élément dans son bloc */
+}
+.gallery div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 10px;
+  flex: none;
+}
+.gallery div img {
+  width: 100%;
+  filter: grayscale(100%);
+  /*convertit une image en niveaux de gris*/
+}
+.gallery div img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  /*rétablir la fonctionnalité d'image en couleur*/
+}
+#backBtn,
+#nextBtn {
+  width: 50px;
+  cursor: pointer;
+  margin: 40px;
+}
+
+/* hidden scrollbar */
+.gallery::-webkit-scrollbar {
+  display: none;
+}
