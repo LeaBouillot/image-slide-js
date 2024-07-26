@@ -32,10 +32,12 @@ body {
 }
 .gallery div img {
   width: 100%;
+  transition: 0.5s;
   filter: grayscale(100%);
   /*convertit une image en niveaux de gris*/
 }
 .gallery div img:hover {
+  transition: 0.5s;
   transform: scale(1.1);
   filter: grayscale(0%);
   /*rétablir la fonctionnalité d'image en couleur*/
